@@ -1,6 +1,7 @@
 <div
   class="face-snap-card"
   [ngClass]="{ snapped: snapBtnText == 'Oops unSnap' }"
+  *ngIf="faceSnap$ | async as faceSnap"
 >
   <h2>{{ faceSnap.title | uppercase }}</h2>
   <a routerLink="/facesnaps">Back</a>
