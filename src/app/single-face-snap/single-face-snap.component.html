@@ -6,7 +6,7 @@
   <h2>{{ faceSnap.title | uppercase }}</h2>
   <a routerLink="/facesnaps">Back</a>
   <p>
-    Mis en ligne le {{ faceSnap.createdDate | date : 'd MMMM yyyy, à MM:mm' }}
+    Mis en ligne le {{ faceSnap.createdDate | date : 'd MMMM yyyy, à HH:mm' }}
   </p>
   <img [src]="faceSnap.imageUrl" [alt]="faceSnap.title" />
   <p>{{ faceSnap.description }}</p>
@@ -15,7 +15,7 @@
   <p>{{ 0.336 | percent }}</p>
   <p>{{ 344.36 | currency : 'XOF' }}</p>
   <p>
-    <button (click)="onSnap()">{{ snapBtnText }}</button>
+    <button (click)="onSnap(faceSnap.id)">{{ snapBtnText }}</button>
     <span [ngStyle]="{ color: 'rgb(0,' + faceSnap.snaps + ', 0)' }">
       🤌 {{ faceSnap.snaps }}
     </span>

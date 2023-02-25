@@ -1,6 +1,6 @@
 <div class="form-card">
   <h2>NOUVEAU FACESNAP</h2>
-  <form [formGroup]="snapForm">
+  <form [formGroup]="snapForm" (ngSubmit)="onSubmitForm()">
     <div class="form-group">
       <label for="title">Titre</label>
       <input type="text" id="title" formControlName="title" />
@@ -18,13 +18,7 @@
       <input type="text" id="location" formControlName="location" />
     </div>
     <div class="action-buttons">
-      <button
-        type="submit"
-        [disabled]="snapForm.invalid"
-        (click)="onAddNewFaceSnap()"
-      >
-        Enregistrer
-      </button>
+      <button type="submit" [disabled]="snapForm.invalid">Enregistrer</button>
     </div>
   </form>
 </div>
