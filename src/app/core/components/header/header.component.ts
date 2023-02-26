@@ -10,6 +10,6 @@ export class HeaderComponent {
   constructor(private router: Router) {}
 
   onAddNewFaceSnap(): void {
-    this.router.navigateByUrl('/create');
+    this.router.navigateByUrl('facesnaps/create');
   }
 }
